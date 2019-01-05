@@ -100,7 +100,7 @@ void handleNotFound() {
 
 void setup(void) {
   pinMode(relayPin, OUTPUT);
-  digitalWrite(relayPin, LOW);
+  digitalWrite(relayPin, HIGH);
 
 
   // Initialising the UI will init the display too.
@@ -141,7 +141,7 @@ void setup(void) {
   server.on("/", handleRoot);
   
   server.on(keyon, []() {
-    digitalWrite(relayPin, HIGH);
+    digitalWrite(relayPin, LOW);
     server.send(200, "text/plain", "Relay HIGH");    
     display.clear();
     display.drawString(0, 10, "ON");
@@ -149,7 +149,7 @@ void setup(void) {
   });
   
   server.on(keyoff , []() {
-    digitalWrite(relayPin, LOW);
+    digitalWrite(relayPin, HIGH);
     server.send(200, "text/plain", "Relay LOW");
     display.clear();
     display.drawString(0, 10, "OFF");
