@@ -1,5 +1,16 @@
 # GoogleHomeESP32Relay
-Google Home ESP32 Relay using IFTTT and webhooks. 
+Google Home ESP32 Relay using IFTTT and webhooks.
+
+ToDo
+
+HTTP Simple Server on ESP32
+  with a wifi_credentials.h in .gitignore
+  key_auth to add randomized values on the url
+
+Write documentation
+Take some pictures
 
 
-WifiClientSecure for https connections
+Improvements
+  Add oled images
+  WifiClientSecure for https connections
