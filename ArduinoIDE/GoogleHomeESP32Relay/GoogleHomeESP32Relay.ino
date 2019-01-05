@@ -83,12 +83,12 @@ void setup(void) {
 
   server.on("/", handleRoot);
   
-  server.on("/on", []() {
+  server.on(keyon, []() {
     digitalWrite(relayPin, HIGH);
     server.send(200, "text/plain", "Relay HIGH");
   });
   
-  server.on("/off", []() {
+  server.on(keyoff , []() {
     digitalWrite(relayPin, LOW);
     server.send(200, "text/plain", "Relay LOW");
   });
